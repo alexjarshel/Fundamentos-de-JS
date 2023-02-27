@@ -7,9 +7,13 @@ const listaDeAlunosEMedias = [alunos, medias];
 
 function exibeNomeENota(aluno){
     if(listaDeAlunosEMedias[0].includes(aluno)){
-        console.log("ta la")
+        const [alunos,medias] = listaDeAlunosEMedias
 
-        const indice = listaDeAlunosEMedias[0].indexOf(aluno )
+        const indice = alunos.indexOf(aluno)
+
+        const mediaDoAluno = listaDeAlunosEMedias[1][indice];
+
+        console.log(`o ${aluno} tem a media de ${mediaDoAluno}`);
     }else{
         console.log("não achemo")
     }
